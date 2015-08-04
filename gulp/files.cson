@@ -1,0 +1,6 @@
+css: 
+    src: [ "app/**/*.style.{less,css,styl}" ]
+    vendor: []
+js:
+    src: [ "app/**/*.coffee" ]
+    vendor: []
