@@ -7,7 +7,7 @@ module.exports = ( config, util ) ->
             { if_ext, if_arg } = util
             
 
-            gulp.src "app/**/*.style.{less,css,styl}"
+            gulp.src files.css.src
                 .pipe check_if if_ext('less'), less()
                 .pipe check_if if_ext('styl'), stylus()
                 .pipe concat fileName
