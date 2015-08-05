@@ -9,6 +9,7 @@ module.exports = ( config, util ) ->
 
             gulp.src files.js.src
                 # Concat and minify in release mode
-                .pipe check_if if_arg('release'), concat fileName
+                .pipe check_if if_ext('coffee'), coffee { bare: true }
+                .pipe concat fileName
                 .pipe check_if if_arg('release'), uglify mangle: false
                 .pipe gulp.dest build_dir + "/js/"
